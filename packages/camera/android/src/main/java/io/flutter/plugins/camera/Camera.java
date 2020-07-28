@@ -137,7 +137,10 @@ public class Camera {
     mediaRecorder.setVideoFrameRate(recordingProfile.videoFrameRate);
     mediaRecorder.setVideoSize(recordingProfile.videoFrameWidth, recordingProfile.videoFrameHeight);
     mediaRecorder.setOutputFile(outputFilePath);
-    mediaRecorder.setOrientationHint(getMediaOrientation());
+
+    int orientation = getMediaOrientation();
+    System.out.println("Recording file " + outputFilePath + " with orientation '" + orientation.toString() + "'";
+    mediaRecorder.setOrientationHint(orientation);
 
     mediaRecorder.prepare();
   }
