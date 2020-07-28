@@ -1,3 +1,7 @@
+## 0.5.8+4
+
+* Fixed wrong audio bitrate when recording video on android
+
 ## 0.5.8+3
 
 * Fix bug in usage example in README.md 
