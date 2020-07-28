@@ -139,7 +139,7 @@ public class Camera {
     mediaRecorder.setOutputFile(outputFilePath);
 
     int orientation = getMediaOrientation();
-    System.out.println("Recording file " + outputFilePath + " with orientation '" + orientation.toString() + "'";
+    System.out.println("Recording file " + outputFilePath + " with orientation '" + orientation + "'");
     mediaRecorder.setOrientationHint(orientation);
 
     mediaRecorder.prepare();
@@ -520,7 +520,7 @@ public class Camera {
     final int sensorOrientationOffset =
         (currentOrientation == ORIENTATION_UNKNOWN)
             ? 0
-            : currentOrientation;
+            : (isFrontFacing) ? -currentOrientation : currentOrientation;
     return (sensorOrientationOffset + sensorOrientation + 360) % 360;
   }
 }
