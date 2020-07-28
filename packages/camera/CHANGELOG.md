@@ -1,3 +1,7 @@
+## 0.5.8+5
+
+* Video orientation is no longer inverted on android when using a front-facing camera
+
 ## 0.5.8+4
 
 * Fixed wrong audio bitrate when recording video on android
